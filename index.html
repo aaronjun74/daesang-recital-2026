@@ -70,24 +70,24 @@
   /* ===== 인쇄용(?print): 흰 바탕 ===== */
   body.printver .prog{background:#fff}
 
-  /* ===== 순서지 면 컬러 ===== */
-  .prog,body.printver .prog{background:radial-gradient(ellipse at 50% 30%,#1d2537 0%,#121826 55%,#0a0d15 100%);color:#efe6d2;--line:rgba(201,169,94,.32)}
-  .prog .name{color:#f5ecd8}
-  .prog .no{color:#c9a95e}
-  .prog .piece .c{color:#cdbb93}
+  .cover{background:radial-gradient(ellipse at 50% 32%,#4a2350 0%,#2e1433 55%,#16081a 100%)}
+  .cover::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(255,225,170,.09),transparent 60%)}
+  .prog,body.printver .prog{background:radial-gradient(ellipse at 50% 32%,#4a2350 0%,#2e1433 55%,#16081a 100%);color:#efe6d2;--line:rgba(201,169,94,.32)}
+  .prog .name{color:#f5ecd8} .prog .no{color:#c9a95e} .prog .piece .c{color:#cdbb93}
   .prog .head .sub{color:#c9a95e}
   .prog .foil-d{background:var(--foil);-webkit-background-clip:text;background-clip:text}
   .prog .extra .name{color:#e0c27a}
 
   /* ===== 웹 배포용 ===== */
-  @media screen{body{background:#0a0d15;padding:56px 0 24px}.page{box-shadow:0 6px 30px rgba(0,0,0,.5)}}
-  .dl{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:10;background:linear-gradient(100deg,#9c7a2e,#e9d39a,#b8913f);
+  @media screen{body{background:#16081a;padding:56px 0 24px}.page{box-shadow:0 6px 30px rgba(0,0,0,.5)}}
+  .dlbar{position:fixed;top:10px;left:0;right:0;z-index:10;display:flex;justify-content:center;gap:10px}
+  .dl{background:linear-gradient(100deg,#9c7a2e,#e9d39a,#b8913f);
       color:#1d1a16;font:700 15px 'Nanum Myeongjo',serif;padding:9px 22px;border-radius:22px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}
-  @media print{.dl{display:none}}
+  @media print{.dlbar{display:none}}
 </style>
 </head>
 <body>
-<a class="dl" href="recital-2026.pdf" download="2026_대상음악학원_정기연주회_순서지.pdf">PDF 내려받기</a>
+<div class="dlbar"><a class="dl" href="recital-2026.pdf" download="2026_대상음악학원_정기연주회_전체.pdf">전체 PDF</a><a class="dl" href="cover-2026.pdf" download="2026_대상음악학원_정기연주회_표지.pdf">표지 PDF</a><a class="dl" href="program-2026.pdf" download="2026_대상음악학원_정기연주회_순서지.pdf">순서지 PDF</a></div>
 <svg width="0" height="0" style="position:absolute">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
@@ -211,7 +211,6 @@ const program = [
 document.getElementById("list").innerHTML = program.map((p,i)=>
   `<div class="item"><span class="no">${String(i+1).padStart(2,"0")}</span><span class="name">${p[0]}</span>
    <span class="piece"><span>${p[1]}</span><span class="c">${p[2]}</span></span></div>`).join("");
-
 </script>
 </body>
 </html>
