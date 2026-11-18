@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=820">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="2026 대상음악학원 정기연주회">
+<meta property="og:description" content="2026년 11월 28일(토) 오후 4시 · 창동문화체육센터 공연장">
+<title>2026 대상음악학원 정기연주회</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  @page{size:A4;margin:0}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#ccc;font-family:'Nanum Myeongjo','Batang',serif;line-height:1.25;
+    --foil:linear-gradient(100deg,#9c7a2e 0%,#e9d39a 22%,#b8913f 40%,#f7e9bf 55%,#a8842f 75%,#e6cf92 100%);
+    --foil-d:linear-gradient(100deg,#7a5c1c 0%,#b8913f 30%,#8a6a22 55%,#b08d3c 80%,#7a5c1c 100%);
+    --ink:#1d1a16; --gold:#a8842f; --sub:#5f574b; --line:rgba(168,132,47,.35)}
+  .page{width:210mm;height:297mm;margin:10mm auto;position:relative;overflow:hidden;page-break-after:always}
+  @media print{body{background:none}.page{margin:0}}
+  .foil{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .foil-d{background:var(--foil-d);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  .cframe{position:absolute;inset:11mm;border:1pt solid #b8913f}
+  .cframe::after{content:"";position:absolute;inset:2.5mm;border:.4pt solid rgba(217,192,138,.6)}
+  .orn{position:absolute;width:26mm;height:26mm}
+  .o1{top:7.5mm;left:7.5mm}.o2{top:7.5mm;right:7.5mm;transform:scaleX(-1)}
+  .o3{bottom:7.5mm;left:7.5mm;transform:scaleY(-1)}.o4{bottom:7.5mm;right:7.5mm;transform:scale(-1,-1)}
+
+  /* ================= 1페이지: 표지 ================= */
+  .cover{background:radial-gradient(ellipse at 50% 40%,#1d2537 0%,#121826 55%,#0a0d15 100%);color:#efe6d2;
+    display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:36mm}
+  .cover .staff{position:absolute;left:0;right:0;top:170mm;width:100%;height:55mm;opacity:.16}
+  .acad-en{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.6em;margin-right:-.6em;font-size:10pt}
+  .crest{width:16mm;height:16mm;margin:9mm 0 6mm}
+  .the{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17pt;letter-spacing:.2em}
+  .cover .script{font-family:'Great Vibes',cursive;font-size:84pt;line-height:1.35;padding:4mm 8mm 2mm;margin-top:-6mm}
+  .flour{width:120mm;height:12mm;margin:5mm 0 7mm}
+  .cover h1{font-size:31pt;font-weight:800;letter-spacing:.32em;margin-right:-.32em;color:#f3ead6}
+  .cover .slogan{font-size:17.5pt;font-weight:700;letter-spacing:.3em;margin:8mm -.3em 0 0}
+  .cover .info{position:absolute;bottom:52mm;left:0;right:0;font-size:14pt;line-height:2.3;color:#efe6d2}
+  .cover .info b{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.25em;font-size:11.5pt;color:#c9a95e;
+    display:inline-block;width:22mm;text-align:right;margin-right:6mm}
+  .cover .info .v{display:inline-block;width:84mm;text-align:left;border-bottom:.4pt solid rgba(201,169,94,.5)}
+  .cover .host{position:absolute;bottom:22mm;left:0;right:0;text-align:center}
+  .cover .host .kr{font-size:30pt;font-weight:800;letter-spacing:.45em;margin-right:-.45em;line-height:1.4;display:inline-block;padding:0 2mm}
+  .cover .host .en{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:10pt;letter-spacing:.55em;margin-right:-.55em;color:#c9a95e;margin-top:1mm}
+
+  /* ================= 2페이지: 프로그램 ================= */
+  .prog{background:#fbf8f1;color:var(--ink);padding:15mm 21mm 0}
+  .prog .head{text-align:center}
+  .prog .head .script{font-family:'Great Vibes',cursive;font-size:36pt;line-height:1.3;padding:2mm 6mm 0;margin-top:-4mm;display:inline-block}
+  .prog .head .sub{font-size:10.5pt;letter-spacing:.35em;margin-right:-.35em;color:var(--sub);margin-top:1mm}
+  .prog .flour{display:block;width:80mm;height:5mm;margin:1.5mm auto 2mm}
+  .item{display:grid;grid-template-columns:10mm 23mm 1fr;align-items:baseline;padding:.45mm 0;border-bottom:.4pt dotted var(--line)}
+  .no{font-family:'Cormorant Garamond',serif;font-size:13.5pt;color:var(--gold);font-weight:600}
+  .name{font-size:12pt;font-weight:700;letter-spacing:.06em}
+  .piece{display:flex;justify-content:space-between;gap:3mm;font-size:11.5pt}
+  .piece .c{color:var(--sub);font-size:10.3pt;white-space:nowrap}
+  .extra{margin-top:0;border-top:.7pt solid #b8913f;border-bottom:.7pt solid #b8913f}
+  #list .item:last-child,.extra .item:last-child{border-bottom:none}
+  .extra .name{color:var(--gold)}
+  .finale{margin-top:3mm;border-top:.7pt solid #b8913f;border-bottom:.7pt solid #b8913f;padding:1.4mm 2mm;display:flex;justify-content:space-around;align-items:baseline;font-size:10.5pt}
+  .finale .k{font-weight:800;color:var(--gold);margin-right:2.5mm;letter-spacing:.05em}.finale .c{color:var(--sub);font-size:9.5pt;margin-left:2mm}
+  .finale .lbl{font-family:'Cormorant Garamond',serif;letter-spacing:.45em;font-size:8.5pt;color:var(--gold)}
+  .finale .row{display:flex;align-items:baseline;font-size:10.5pt;padding:.8mm 0}
+  .finale .k{width:22mm;text-align:left;font-weight:800;letter-spacing:.1em}
+  .finale .t{flex:1}
+  .finale .c{width:26mm;text-align:right;color:var(--sub);font-size:9.5pt}
+
+  /* ===== 인쇄용(?print): 흰 바탕 ===== */
+  body.printver .prog{background:#fff}
+
+  /* ===== 순서지 면 컬러 ===== */
+  .prog,body.printver .prog{background:radial-gradient(ellipse at 50% 30%,#1d2537 0%,#121826 55%,#0a0d15 100%);color:#efe6d2;--line:rgba(201,169,94,.32)}
+  .prog .name{color:#f5ecd8}
+  .prog .no{color:#c9a95e}
+  .prog .piece .c{color:#cdbb93}
+  .prog .head .sub{color:#c9a95e}
+  .prog .foil-d{background:var(--foil);-webkit-background-clip:text;background-clip:text}
+  .prog .extra .name{color:#e0c27a}
+
+  /* ===== 웹 배포용 ===== */
+  @media screen{body{background:#0a0d15;padding:56px 0 24px}.page{box-shadow:0 6px 30px rgba(0,0,0,.5)}}
+  .dl{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:10;background:linear-gradient(100deg,#9c7a2e,#e9d39a,#b8913f);
+      color:#1d1a16;font:700 15px 'Nanum Myeongjo',serif;padding:9px 22px;border-radius:22px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}
+  @media print{.dl{display:none}}
+</style>
+</head>
+<body>
+<a class="dl" href="recital-2026.pdf" download="2026_대상음악학원_정기연주회_순서지.pdf">PDF 내려받기</a>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9c7a2e"/><stop offset=".3" stop-color="#ecd69c"/>
+      <stop offset=".55" stop-color="#b8913f"/><stop offset=".8" stop-color="#f4e4b4"/><stop offset="1" stop-color="#a8842f"/>
+    </linearGradient>
+    <symbol id="corner" viewBox="0 0 100 100">
+      <path d="M4 96 V4 H96" fill="none" stroke="url(#g)" stroke-width="2"/>
+      <path d="M12 70 V12 H70" fill="none" stroke="url(#g)" stroke-width=".8"/>
+      <path d="M12 40 C12 22 22 12 40 12" fill="none" stroke="url(#g)" stroke-width="1"/>
+      <path d="M20 46 C24 30 30 24 46 20" fill="none" stroke="url(#g)" stroke-width=".7"/>
+      <path d="M4 4 L16 16" stroke="#c9a95e" stroke-width="1"/>
+      <rect x="13" y="13" width="7" height="7" transform="rotate(45 16.5 16.5)" fill="url(#g)"/>
+      <circle cx="4" cy="96" r="2" fill="url(#g)"/><circle cx="96" cy="4" r="2" fill="url(#g)"/>
+    </symbol>
+    <symbol id="flourish" viewBox="0 0 400 40">
+      <g fill="none" stroke="#c9a95e" stroke-width="1.2">
+        <path d="M20 20 H150"/><path d="M250 20 H380"/>
+        <path d="M150 20 C160 6 176 6 180 16 C183 24 174 28 170 22"/><path d="M150 20 C160 34 176 34 180 24"/>
+        <path d="M250 20 C240 6 224 6 220 16 C217 24 226 28 230 22"/><path d="M250 20 C240 34 224 34 220 24"/>
+      </g>
+      <rect x="193" y="13" width="14" height="14" transform="rotate(45 200 20)" fill="url(#g)"/>
+      <circle cx="20" cy="20" r="2.2" fill="url(#g)"/><circle cx="380" cy="20" r="2.2" fill="url(#g)"/>
+      <circle cx="60" cy="20" r="1.4" fill="url(#g)"/><circle cx="340" cy="20" r="1.4" fill="url(#g)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= 1페이지: 표지 ================= -->
+<section class="page cover">
+  <div class="cframe"></div>
+  <svg class="orn o1"><use href="#corner"/></svg><svg class="orn o2"><use href="#corner"/></svg>
+  <svg class="orn o3"><use href="#corner"/></svg><svg class="orn o4"><use href="#corner"/></svg>
+  <svg class="staff" viewBox="0 0 800 220" preserveAspectRatio="none">
+    <g fill="none" stroke="url(#g)" stroke-width="1.4">
+      <path d="M-10 60 C200 0 380 160 560 80 S800 40 820 70"/>
+      <path d="M-10 80 C200 20 380 180 560 100 S800 60 820 90"/>
+      <path d="M-10 100 C200 40 380 200 560 120 S800 80 820 110"/>
+      <path d="M-10 120 C200 60 380 220 560 140 S800 100 820 130"/>
+      <path d="M-10 140 C200 80 380 240 560 160 S800 120 820 150"/>
+    </g>
+  </svg>
+
+  <svg class="crest" viewBox="0 0 60 60">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="url(#g)" stroke-width="1"/>
+    <circle cx="30" cy="30" r="24.5" fill="none" stroke="url(#g)" stroke-width=".5"/>
+    <path d="M19 16 C14 28 18 40 30 44 C42 40 46 28 41 16" fill="none" stroke="url(#g)" stroke-width="1.6"/>
+    <path d="M19 16 C22 14 24 17 22 20 M41 16 C38 14 36 17 38 20" fill="none" stroke="url(#g)" stroke-width="1.2"/>
+    <path d="M25 22 V40 M30 21 V42 M35 22 V40" stroke="#c9a95e" stroke-width=".7"/>
+    <path d="M22 22 H38" stroke="#c9a95e" stroke-width="1.2"/>
+    <rect x="26" y="44" width="8" height="3" fill="url(#g)"/>
+  </svg>
+  <div class="the foil">The 2026 Annual</div>
+  <div class="script foil">Piano Recital</div>
+  <svg class="flour"><use href="#flourish"/></svg>
+  <h1>2026 정기연주회</h1>
+  <div class="slogan foil">“ 하나됨의 선율 속으로 ”</div>
+
+  <div class="info">
+    <div><b>DATE</b><span class="v">2026년 11월 28일 (토) 오후 4시</span></div>
+    <div><b>VENUE</b><span class="v">창동문화체육센터 공연장</span></div>
+  </div>
+  <div class="host"><div class="kr foil">대상음악학원</div><div class="en">DAESANG MUSIC ACADEMY</div></div>
+</section>
+
+<!-- ================= 2페이지: 프로그램 ================= -->
+<section class="page prog">
+  <div class="cframe"></div>
+  <svg class="orn o1"><use href="#corner"/></svg><svg class="orn o2"><use href="#corner"/></svg>
+  <svg class="orn o3"><use href="#corner"/></svg><svg class="orn o4"><use href="#corner"/></svg>
+  <div class="head">
+    <div class="script foil-d">Program</div>
+    <div class="sub">2026 대상음악학원 정기연주회</div>
+  </div>
+  <svg class="flour"><use href="#flourish"/></svg>
+  <div id="list"></div>
+  <div class="extra">
+    <div class="item"><span class="no"></span><span class="name">축하연주</span>
+      <span class="piece"><span>Welcome to the Show</span><span class="c">청년밴드</span></span></div>
+    <div class="item"><span class="no"></span><span class="name">합창</span>
+      <span class="piece"><span>나는 나비 (YB)</span><span class="c">다 같이</span></span></div>
+  </div>
+</section>
+
+<script>
+if (location.search.includes("print")) document.body.classList.add("printver");
+/* 연주 순서: [이름, 곡명, 작곡가] */
+const program = [
+  ["한세아","애국가 / 알레그레토","안익태 / 디아벨리"],
+  ["김규리","당신의 소중한 사람","노르웨이 민요"],
+  ["박서윤","소나티나 in C Op.57 No.1","비엘"],
+  ["박정우","돈 조반니 / 타란텔라 / 인디언 춤","모차르트 / 애론 / 질로크"],
+  ["조은서","꽃의 왈츠 –〈호두까기 인형〉 중에서","차이코프스키"],
+  ["김민준","소나티나 1악장 / 소나티나 4번","구를리트 / 박태희"],
+  ["배서연","제주도의 푸른 밤 / 소나티나 in C","최성원 / 비엘"],
+  ["정이로","보글보글 / 카트라이더","카미지마 / 넥슨"],
+  ["남주아","아름다운 세상 (A Whole New World)","알라딘 OST"],
+  ["홍지훈","엔터테이너","스팅 OST"],
+  ["전보민","스파클 / 이웃집 토토로","너의 이름은 OST / 히사이시 조"],
+  ["이준우","마녀 댄스 Op.4 No.2","쿨락"],
+  ["이지아","파리의 휴일","질로크"],
+  ["김승후","소나티나 Op.36 No.1 3악장","클레멘티"],
+  ["서유주","소나티나 Op.36 No.2 3악장","클레멘티"],
+  ["나시완","소나티나 in C Major 2악장","하슬링거"],
+  ["조하은","행진곡 –〈호두까기 인형〉 중에서","차이코프스키"],
+  ["홍태유","소나티나 Op.168 No.3 3악장","디아벨리"],
+  ["김경빈","소나티나 Anh.5 2악장","베토벤"],
+  ["박선우","엘 자파테아도","알렉산더"],
+  ["한태희","집시 댄스","마이어"],
+  ["정우현","소나티나 in A minor","러셀 자코비"],
+  ["소보영","소나티나 in C Major Op.266 No.1","리히너"],
+  ["이은우","물레의 노래","엘멘리히"],
+  ["박혜린","카니발 볼","질로크"],
+  ["권우빈","소나티나 Op.55 No.3 1악장","쿨라우"],
+  ["김래훤","타란텔라","버몬트"],
+  ["김민재","인터스텔라","한스 짐머"],
+  ["이주원","에튀드 알레그로","나카다 요시나오"],
+  ["조재현","강아지 왈츠","쇼팽"],
+  ["정유찬","사랑의 꿈","리스트"]
+];
+document.getElementById("list").innerHTML = program.map((p,i)=>
+  `<div class="item"><span class="no">${String(i+1).padStart(2,"0")}</span><span class="name">${p[0]}</span>
+   <span class="piece"><span>${p[1]}</span><span class="c">${p[2]}</span></span></div>`).join("");
+
+</script>
+</body>
+</html>
