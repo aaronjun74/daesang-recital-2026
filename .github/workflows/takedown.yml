@@ -1,0 +1,40 @@
+# 연주회(2026-11-28) 7일 후인 2026-12-05(한국시간)에 순서지 페이지를 자동으로 내립니다.
+name: takedown-after-recital
+on:
+  schedule:
+    - cron: "5 15 * * *"   # 매일 00:05 (한국시간)
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  takedown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 날짜 확인
+        id: d
+        run: |
+          today=$(TZ=Asia/Seoul date +%Y%m%d)
+          echo "today=$today"
+          if [ "$today" -ge 20261205 ]; then echo "go=1" >> $GITHUB_OUTPUT; fi
+      - uses: actions/checkout@v4
+        if: steps.d.outputs.go == '1'
+      - name: 페이지 내리기
+        if: steps.d.outputs.go == '1'
+        run: |
+          git rm -q --ignore-unmatch recital-2026.pdf cover-2026.pdf program-2026.pdf
+          cat > index.html <<'HTML'
+          <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+          <title>대상음악학원</title></head>
+          <body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#16081a;color:#e9d39a;font-family:serif;text-align:center">
+          <div><h2>2026 정기연주회가 마무리되었습니다.</h2><p>함께해 주셔서 감사합니다.<br>대상음악학원</p></div></body></html>
+          HTML
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -m "연주회 종료: 순서지 페이지 내림" && git push
+      - name: 이 자동작업 끄기
+        if: steps.d.outputs.go == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow disable takedown-after-recital -R ${{ github.repository }}
